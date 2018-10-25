@@ -17,6 +17,8 @@ public class Generator {
 	
 	public static String[] drinkers = new String[500];
 	
+	public static final String[] manufacturer = {"AB_inbev","Heineken Holding","Asahi Group","Molson Coors Brewing","Calsberg Group"};
+	
 	public static String[][] addresses = new String[500][3];
 	
 	public static String[] phoneNumbers = new String[500];
