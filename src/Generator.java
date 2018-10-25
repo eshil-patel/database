@@ -11,6 +11,10 @@ public class Generator {
 	public static final String[] BEERS = {"HAZE","UNRELIABLE NARRATOR","SPOTTED COW","THREE PHILOSOPHERS","PRIMA PILS","TEMPTATION","PSEUDOSUE","SEIZOEN BRETTA",
 			  "SAMUEL ADAMS"," GOSE GONE WILD"," ZOMBIE DUST","NARRAGANSETT LAGER"," OLD CHUB","HEADY TOPPER","MIDAS TOUCH","RUMPKIN","PM DAWN","CORONA","BUDWEISER","COORS","PBR","MILLER","MICHELOB","HEINEKEN","BUSCH"};
 	
+	public static final String[] food = {"chicken wings","flatbread","steak","chicken burrito","pulled pork","alfredo pasta","fries","spagetti","pizza","garlic bread","noodles","turkey sub","taco","churro","burger","chicken platter"};
+	
+	public static final String[] drinks = {"Coke","Sprite","Seltzer","Orange Juice","Red Bull","Milkshake","Bottled Water","Fanta","Dr.Pepper"};
+	
 	public static String[] drinkers = new String[500];
 	
 	public static String[][] addresses = new String[500][3];
@@ -18,7 +22,7 @@ public class Generator {
 	public static String[] phoneNumbers = new String[500];
 	
 	public static String[] times = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00",
-					"12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"}
+					"12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
 		
 	
 	@SuppressWarnings("resource")
