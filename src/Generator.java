@@ -23,6 +23,8 @@ public class Generator {
 	
 	public static String[] phoneNumbers = new String[500];
 	
+	public static String[] bar_name = new String[100];
+	
 	public static String[] times = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00",
 					"12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
 		
@@ -52,6 +54,17 @@ public class Generator {
 			}
 			
 			sc.close();
+			
+			sc=new Scanner(new File("bar_names.txt"));
+			int j=0;
+			while(sc.hasNextLine()) 
+			{
+				String line = sc.nextLine();
+				String[] inter = line.split(" ",2);
+				String[] finish = inter[1].split("\\(",2);
+				bar_name[j]=finish[0];
+				j=j+1;
+			}
 			
 			sc = new Scanner(new File("PhoneNumbers.txt"));
 			i = 0;
