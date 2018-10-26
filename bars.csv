@@ -1,0 +1,101 @@
+barId,barName,license,open,close,phone,address,city,state
+0,Salty Dawg Saloon ,IL24587,15:00,03:00,(660) 453-7636,320 Piper Rd.,Mount Prospect,IL
+1,Kon Tiki Restaurant Lounge ,FL91273,14:00,04:00,(707) 653-0482,7406 North Amherst Ave.,Boca Raton,FL
+2,The Griswold Inn Tap Room ,CT25673,12:00,02:00,(389) 364-5110,83 Littleton Ave.,North Haven,CT
+3,Pengilly’s Saloon ,NY50525,13:00,02:00,(225) 413-9530,40 3rd Lane,Brooklyn,NY
+4,Red Key Tavern ,GA28568,14:00,04:00,(579) 685-5569,698 High Avenue,Ellenwood,GA
+5,Johnny’s Tavern ,NJ80015,14:00,04:00,(851) 391-3429,46 Helen St.,Clifton,NJ
+6,Goodnight Gracie Jazz & Martini Bar ,PA57519,12:00,03:00,(924) 702-4803,731 South Vale Dr.,West Chester,PA
+7,The Upstairs Bar at City Grocery ,OH51455,13:00,04:00,(789) 620-3935,67 Ann Street,Westerville,OH
+8,Charlie B’s ,CT95430,13:00,03:00,(861) 515-9074,389 Mayflower Drive,Shelton,CT
+9,McGovern’s Tavern ,NC38954,14:00,02:00,(876) 639-4884,21 Blue Spring Ave.,Morganton,NC
+10,The Velvet Tango Room ,NY96442,12:00,04:00,(531) 922-4953,9831 East Annadale Rd.,Jackson Heights,NY
+11,Academia ,WI68395,14:00,02:00,(586) 648-9205,9 Mulberry Lane,Oak Creek,WI
+12,Edna’s ,NJ31097,14:00,02:00,(918) 825-1534,339 Thatcher Lane,Marlton,NJ
+13,Cook & Brown Public House ,MA85683,14:00,03:00,(446) 587-6739,36 4th St.,Beverly,MA
+14,Million Dollar Cowboy Bar ,NY99982,13:00,02:00,(409) 936-2154,300 Nut Swamp Dr.,Hempstead,NY
+15,AIDA Bistro & Wine Bar ,IN61458,15:00,01:00,(722) 736-4607,3 Adams Rd.,Jeffersonville,IN
+16,The Alembic ,MI20769,15:00,01:00,(949) 201-0273,7137 Glenholme Ave.,Romulus,MI
+17,Multnomah Whiskey Library ,IN68617,15:00,03:00,(713) 330-1513,65 Pheasant St.,Granger,IN
+18,Room 11 ,VA80506,15:00,01:00,(855) 460-9274,758 Marshall St.,Leesburg,VA
+19,Taste by Niche ,FL29802,12:00,02:00,(556) 287-0374,694 Wentworth Ave.,Titusville,FL
+20,Donna ,PA14580,13:00,04:00,(980) 888-2056,6 Old Green Hill St.,Mechanicsburg,PA
+21,Wang Chung’s Karaoke Bar ,PA53255,15:00,01:00,(553) 268-6165,7002 Broad St.,Harleysville,PA
+22,Callaghan’s Irish Social Club ,PA63121,15:00,01:00,(395) 864-9561,8081 Sutor Dr.,Lansdale,PA
+23,Billy Sunday ,IL43803,14:00,04:00,(393) 393-6726,60 Riverside Dr.,Geneva,IL
+24,The Shanty ,MN21684,14:00,04:00,(202) 260-3858,9266 Blue Spring Ave.,Minneapolis,MN
+25,The Baldwin and Sons Trading Co. ,IL85388,12:00,03:00,(644) 597-5137,7198 Parker Street,Park Ridge,IL
+26,Tradition ,TX26729,13:00,02:00,(203) 957-2946,8427 Locust Ave.,Sugar Land,TX
+27,The Porter Beer Bar ,MD97303,13:00,02:00,(382) 587-0649,394 S. San Pablo Ave.,Oxon Hill,MD
+28,ROKC ,PA58960,13:00,04:00,(540) 634-8914,7905 Ivy Ave.,East Stroudsburg,PA
+29,The Kill Devil Club ,TX26918,13:00,02:00,(277) 385-4437,9466 Cobblestone Drive,Mcallen,TX
+30,Marvel Bar ,FL40993,15:00,03:00,(996) 905-8741,520 Cardinal Ave.,Key West,FL
+31,Range ,MN60449,15:00,03:00,(479) 347-7665,42 Green Drive,Savage,MN
+32,Maison Première ,FL42914,13:00,02:00,(744) 836-7819,7627 W. Bayberry St.,Port Charlotte,FL
+33,No Vacancy at the Juniper Hotel ,MI34051,13:00,02:00,(513) 905-4375,969 Hill Street,Dearborn Heights,MI
+34,Prairie School ,NJ89340,13:00,02:00,(371) 623-9038,87 Rose St.,Parlin,NJ
+35,The Dubliner ,NC34833,15:00,03:00,(523) 645-1072,9921 Lakewood Drive,Asheville,NC
+36,Dutch Kills ,MA26931,14:00,02:00,(341) 329-0561,8349 Locust Dr.,Billerica,MA
+37,Dick’s Place ,MD98881,14:00,01:00,(766) 771-6605,8668 Swanson Ave.,Gaithersburg,MD
+38,The Beachcomber ,IN76599,14:00,02:00,(218) 747-6936,391 Glen Creek Court,Chesterton,IN
+39,The Silver Dollar ,NJ92350,15:00,01:00,(984) 269-1694,93 Catherine Ave.,West Orange,NJ
+40,Spirit of 77 ,NY83920,12:00,01:00,(524) 568-8776,28 Shub Farm St.,Baldwinsville,NY
+41,McMahon's Public House ,NJ44285,14:00,01:00,(748) 472-0051,3 W. Argyle Dr.,Long Branch,NJ
+42,33 Taps ,PA96893,13:00,01:00,(282) 519-8295,90 St Louis St.,Indiana,PA
+43,Molly's Shebeen ,NY19620,13:00,04:00,(991) 446-3423,413 Alderwood St.,Poughkeepsie,NY
+44,Polite Provisions ,CA72756,15:00,01:00,(228) 803-2826,763 West Carpenter Ave.,Lawndale,CA
+45,Square Grouper Tiki Bar ,MN96101,12:00,04:00,(384) 703-8190,47 Brandywine Road,Owatonna,MN
+46,Cooter Brown’s Tavern & Oyster Bar ,NY50743,12:00,03:00,(634) 739-1642,99 South St Louis Drive,Fairport,NY
+47,Tiki-Ti ,MI68670,15:00,04:00,(358) 454-7854,970 North Meadow Ave.,Flint,MI
+48,Voodoo ,GA91783,15:00,01:00,(552) 452-3167,215 Roehampton Avenue,Dacula,GA
+49,George & Dragon ,MD64119,15:00,01:00,(951) 539-5471,82 Paris Hill Drive,Randallstown,MD
+50,Yard House ,OH97254,15:00,01:00,(441) 638-4577,7206 Green Lake St.,Alliance,OH
+51,McGillin’s Old Ale House ,MA43192,15:00,03:00,(940) 965-1660,158 Thompson St.,Plymouth,MA
+52,Leyenda ,MI91125,15:00,02:00,(204) 345-8346,7280 Fawn Street,Adrian,MI
+53,Spirit ,MD53026,15:00,01:00,(781) 785-9759,550 Olive Dr.,Potomac,MD
+54,Libertine Liquor Bar ,OH67738,13:00,02:00,(807) 240-1625,866 N. Dunbar Street,Dayton,OH
+55,Bar Liquorice ,NY41132,13:00,02:00,(333) 843-8373,9099 Pennington Court,Smithtown,NY
+56,The Bella Union ,FL77369,14:00,03:00,(274) 496-7390,769 Coffee Lane,Delray Beach,FL
+57,Yvonne’s ,MA83458,13:00,03:00,(471) 272-9568,421 Homewood Street,New Bedford,MA
+58,Galaxie ,SC19073,13:00,02:00,(634) 262-0580,55 S. Poplar St.,Ladson,SC
+59,Clover Club ,NJ24523,15:00,01:00,(420) 605-0623,8465 White Ave.,Camden,NJ
+60,Distil ,NY99573,14:00,03:00,(540) 665-5892,467 Sulphur Springs Road,Huntington Station,NY
+61,The Carousel Bar & Lounge ,CT42191,13:00,02:00,(473) 882-7559,857 Maple Street,New Milford,CT
+62,Nick’s English Hut ,NJ93673,12:00,02:00,(735) 221-6789,988 Mechanic Drive,Manchester Township,NJ
+63,Pete’s Dueling Piano Bar ,TN43970,13:00,01:00,(628) 383-9588,302 Acacia Ave.,Antioch,TN
+64,Clyde Common ,MI30314,13:00,04:00,(901) 359-2105,9832 Lake View St.,Grandville,MI
+65,The Bar Room at the Beekman Hotel ,FL54116,14:00,02:00,(924) 683-9763,89 W. La Sierra Ave.,North Miami Beach,FL
+66,The Violet Hour ,GA56448,13:00,02:00,(358) 988-4605,8875 Woodland Street,Douglasville,GA
+67,Occidental ,GA53816,13:00,01:00,(222) 780-1705,17 Cedar St.,Fairburn,GA
+68,The Whining Pig ,TX92845,14:00,04:00,(486) 685-2050,9839 East Gulf Rd.,Houston,TX
+69,Seamstress ,FL95387,15:00,01:00,(450) 590-4154,892 Santa Clara St.,Boynton Beach,FL
+70,barmini by José Andres ,CA29691,14:00,02:00,(312) 520-4422,9180 E. Rockledge St.,Los Angeles,CA
+71,Apothéke ,TN89707,15:00,04:00,(378) 450-7517,7451 North Mayfield Rd.,Mount Juliet,TN
+72,Blackberry Farm ,IL44308,13:00,04:00,(412) 413-5753,9061 Baker Ave.,Barrington,IL
+73,Robert’s Western World ,MA85990,15:00,04:00,(782) 936-1118,219 Crescent Dr.,Marlborough,MA
+74,Ticonderoga Club ,NY40569,12:00,01:00,(440) 229-6381,7654 Richardson Lane,Carmel,NY
+75,McSorley’s Old Ale House ,NE26554,14:00,03:00,(236) 628-5259,310 South Wild Horse Lane,Grand Island,NE
+76,BackBar ,FL92413,13:00,01:00,(960) 213-1974,20 Sulphur Springs Rd.,Lady Lake,FL
+77,The Wayland ,NY83591,15:00,01:00,(800) 803-0528,9565 Riverview Drive,Bethpage,NY
+78,Barnacle Bar ,OH30307,15:00,01:00,(787) 650-3867,805 Bayport Court,Loveland,OH
+79,The Varnish ,PA24143,15:00,04:00,(625) 222-7945,9973 Pin Oak Road,Pittsburgh,PA
+80,McGreevy’s ,LA51132,14:00,01:00,(444) 656-8166,91 Winding Way Drive,Baton Rouge,LA
+81,The Sound Table ,OH84414,13:00,03:00,(251) 619-8057,73 Peachtree Lane,Springboro,OH
+82,The Magdalenae Room ,NC25005,12:00,03:00,(520) 668-8222,6 High Circle,High Point,NC
+83,Half Step ,PA19448,13:00,02:00,(564) 449-3876,9983 Tailwater Drive,New Castle,PA
+84,Brimmer & Heeltap ,CT67422,12:00,04:00,(825) 586-4616,76 Court St.,Norwich,CT
+85,The Brewer’s Art ,NY10819,14:00,04:00,(406) 739-4987,69 Thomas St.,Webster,NY
+86,Gooski’s ,CT63628,15:00,02:00,(342) 699-2460,5 Walnut Lane,Naugatuck,CT
+87,Spilt Milk ,SC68429,15:00,02:00,(524) 650-1653,176 Mammoth St.,North Augusta,SC
+88,Sassafras Saloon ,PA58744,13:00,01:00,(956) 204-7421,55 Shipley Street,Williamsport,PA
+89,Slowly Shirley ,MN61320,14:00,02:00,(705) 616-0870,9642 Honey Creek Dr.,Saint Cloud,MN
+90,Tiny’s Restaurant & Lounge ,IA55660,13:00,02:00,(835) 452-7090,8887 N. Manor Station St.,Cedar Rapids,IA
+91,Raven & Rose ,NY79652,14:00,02:00,(464) 586-2195,999 West Circle St.,Auburn,NY
+92,Diamond Reef ,FL72629,12:00,04:00,(738) 832-3816,76 S. Olive Court,Stuart,FL
+93,Kask ,AL51553,13:00,04:00,(991) 706-6100,5 Bay Meadows Lane,Enterprise,AL
+94,B.D. Riley's  ,NY30959,13:00,03:00,(611) 608-9804,9345 Gainsway Street,Coram,NY
+95,Beach Tree Bar ,WI60005,13:00,04:00,(980) 515-6047,378 North Mill Pond Ave.,Appleton,WI
+96,Bit House Saloon ,IL62712,15:00,03:00,(465) 554-7008,32 Longfellow St.,Glen Ellyn,IL
+97,Vesper Bar ,NC59797,15:00,01:00,(659) 808-6015,7356 Illinois Dr.,Chapel Hill,NC
+98,The Hawthorne ,MI29210,12:00,02:00,(843) 794-9575,9428 School St.,Lincoln Park,MI
+99,Prizefighter ,NJ25472,13:00,02:00,(374) 993-7098,7182 Goldfield Dr.,Plainfield,NJ
