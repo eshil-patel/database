@@ -112,10 +112,53 @@ public class Generator {
 		}
 	
 		//generateDrinkerCSV();
-		generateBarCSV();
+		//generateBarCSV();
+		generateItemsCSV();
 //		for (int i = 0; i < 500; i++) {
 //			System.out.println(addresses[i][0] + addresses[i][1] + addresses[i][2]);
 //		}
+	}
+	
+	public static void generateItemsCSV() {
+		try {
+			PrintWriter writer = new PrintWriter(new File("items.csv"));
+			StringBuilder sb = new StringBuilder();
+			sb.append("itemId").append(',').append("itemName").append(',').append("type").append(',')
+			.append("price").append(',').append("manufacturer").append('\n');
+			
+			int count = 0;
+			for (int i = 0; i < BEERS.length; i++) {
+				String beer = BEERS[i].substring(0, 1) + BEERS[i].substring(1).toLowerCase();
+				String type = "Alcoholic";
+				int price = RANDOM.nextInt(6) + 5;
+				String manu = manufacturer[RANDOM.nextInt(manufacturer.length)];
+				sb.append("" + count++).append(',').append(beer).append(',').append(type).append(',')
+				.append("" + price).append(',').append(manu).append('\n');
+			}
+			
+			for (int i = 0; i < food.length; i++) {
+				String beer = food[i];
+				String type = "Food";
+				int price = RANDOM.nextInt(6) + 5;
+				String manu = "";
+				sb.append("" + count++).append(',').append(beer).append(',').append(type).append(',')
+				.append("" + price).append(',').append(manu).append('\n');
+			}
+			
+			for (int i = 0; i < drinks.length; i++) {
+				String beer = food[i];
+				String type = "Soft drink";
+				int price = RANDOM.nextInt(6) + 5;
+				String manu = "";
+				sb.append("" + count++).append(',').append(beer).append(',').append(type).append(',')
+				.append("" + price).append(',').append(manu).append('\n');
+			}
+			
+			writer.write(sb.toString());
+			writer.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
