@@ -146,7 +146,7 @@ public class Generator {
 			}
 			
 			for (int i = 0; i < drinks.length; i++) {
-				String beer = food[i];
+				String beer = drinks[i];
 				String type = "Soft drink";
 				int price = RANDOM.nextInt(6) + 5;
 				String manu = "";

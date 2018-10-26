@@ -1,51 +1,51 @@
 itemId,itemName,type,price,manufacturer
-0,Haze,Alcoholic,7,Asahi Group
-1,Unreliable narrator,Alcoholic,7,Asahi Group
-2,Spotted cow,Alcoholic,7,Calsberg Group
-3,Three philosophers,Alcoholic,5,AB_inbev
-4,Prima pils,Alcoholic,6,Heineken Holding
-5,Temptation,Alcoholic,8,AB_inbev
-6,Pseudosue,Alcoholic,9,Molson Coors Brewing
-7,Seizoen bretta,Alcoholic,5,Asahi Group
-8,Samuel adams,Alcoholic,9,Heineken Holding
-9, gose gone wild,Alcoholic,5,Asahi Group
-10, zombie dust,Alcoholic,7,Molson Coors Brewing
-11,Narragansett lager,Alcoholic,5,Molson Coors Brewing
-12, old chub,Alcoholic,9,Molson Coors Brewing
-13,Heady topper,Alcoholic,7,Calsberg Group
-14,Midas touch,Alcoholic,7,Molson Coors Brewing
-15,Rumpkin,Alcoholic,10,Molson Coors Brewing
-16,Pm dawn,Alcoholic,9,Heineken Holding
-17,Corona,Alcoholic,9,Calsberg Group
-18,Budweiser,Alcoholic,6,AB_inbev
-19,Coors,Alcoholic,6,Asahi Group
-20,Pbr,Alcoholic,10,AB_inbev
-21,Miller,Alcoholic,7,Molson Coors Brewing
-22,Michelob,Alcoholic,7,Asahi Group
-23,Heineken,Alcoholic,5,AB_inbev
-24,Busch,Alcoholic,6,Molson Coors Brewing
+0,Haze,Alcoholic,5,Asahi Group
+1,Unreliable narrator,Alcoholic,6,AB_inbev
+2,Spotted cow,Alcoholic,7,Asahi Group
+3,Three philosophers,Alcoholic,5,Molson Coors Brewing
+4,Prima pils,Alcoholic,8,Heineken Holding
+5,Temptation,Alcoholic,7,Heineken Holding
+6,Pseudosue,Alcoholic,6,Asahi Group
+7,Seizoen bretta,Alcoholic,9,AB_inbev
+8,Samuel adams,Alcoholic,9,Molson Coors Brewing
+9, gose gone wild,Alcoholic,5,Calsberg Group
+10, zombie dust,Alcoholic,9,Calsberg Group
+11,Narragansett lager,Alcoholic,7,Molson Coors Brewing
+12, old chub,Alcoholic,9,Calsberg Group
+13,Heady topper,Alcoholic,6,Heineken Holding
+14,Midas touch,Alcoholic,7,Heineken Holding
+15,Rumpkin,Alcoholic,10,Heineken Holding
+16,Pm dawn,Alcoholic,6,Calsberg Group
+17,Corona,Alcoholic,5,AB_inbev
+18,Budweiser,Alcoholic,8,Asahi Group
+19,Coors,Alcoholic,6,AB_inbev
+20,Pbr,Alcoholic,8,Asahi Group
+21,Miller,Alcoholic,5,AB_inbev
+22,Michelob,Alcoholic,5,Calsberg Group
+23,Heineken,Alcoholic,7,AB_inbev
+24,Busch,Alcoholic,10,Molson Coors Brewing
 25,chicken wings,Food,9,
-26,flatbread,Food,7,
-27,steak,Food,8,
-28,chicken burrito,Food,7,
+26,flatbread,Food,8,
+27,steak,Food,10,
+28,chicken burrito,Food,10,
 29,pulled pork,Food,6,
-30,alfredo pasta,Food,7,
-31,fries,Food,5,
+30,alfredo pasta,Food,10,
+31,fries,Food,7,
 32,spagetti,Food,6,
-33,pizza,Food,5,
-34,garlic bread,Food,6,
-35,noodles,Food,6,
+33,pizza,Food,9,
+34,garlic bread,Food,9,
+35,noodles,Food,10,
 36,turkey sub,Food,5,
-37,taco,Food,10,
-38,churro,Food,7,
-39,burger,Food,7,
-40,chicken platter,Food,8,
-41,chicken wings,Soft drink,5,
-42,flatbread,Soft drink,9,
-43,steak,Soft drink,9,
-44,chicken burrito,Soft drink,9,
-45,pulled pork,Soft drink,10,
-46,alfredo pasta,Soft drink,7,
-47,fries,Soft drink,7,
-48,spagetti,Soft drink,9,
-49,pizza,Soft drink,8,
+37,taco,Food,6,
+38,churro,Food,8,
+39,burger,Food,9,
+40,chicken platter,Food,6,
+41,Coke,Soft drink,10,
+42,Sprite,Soft drink,10,
+43,Seltzer,Soft drink,6,
+44,Orange Juice,Soft drink,9,
+45,Red Bull,Soft drink,8,
+46,Milkshake,Soft drink,10,
+47,Bottled Water,Soft drink,10,
+48,Fanta,Soft drink,7,
+49,Dr.Pepper,Soft drink,10,
