@@ -15,13 +15,13 @@ public class Generator {
 	
 	public static final String[] drinks = {"Coke","Sprite","Seltzer","Orange Juice","Red Bull","Milkshake","Bottled Water","Fanta","Dr.Pepper"};
 	
-	public static String[] drinkers = new String[500];
+	public static String[] drinkers = new String[1000];
 	
 	public static final String[] manufacturer = {"AB_inbev","Heineken Holding","Asahi Group","Molson Coors Brewing","Calsberg Group"};
 	
-	public static String[][] addresses = new String[500][3];
+	public static String[][] addresses = new String[1000][3];
 	
-	public static String[] phoneNumbers = new String[500];
+	public static String[] phoneNumbers = new String[1000];
 	
 	public static String[] bar_name = new String[100];
 	
@@ -55,7 +55,7 @@ public class Generator {
 			
 			sc.close();
 			
-			sc=new Scanner(new File("bar_names.txt"));
+			sc=new Scanner(new File("bar_name.txt"));
 			int j=0;
 			while(sc.hasNextLine()) 
 			{
@@ -88,7 +88,7 @@ public class Generator {
 			StringBuilder sb = new StringBuilder();
 			sb.append("drinkerId").append(',').append("drinkerName").append(',').append("phone").append(',')
 			.append("address").append(',').append("city").append(',').append("state").append('\n');
-			for (int i = 0; i < 500; i++) {
+			for (int i = 0; i < 1000; i++) {
 				String[] data = addresses[i];
 				sb.append("" + i).append(',').append(drinkers[i]).append(',').append(phoneNumbers[i]).append(',')
 				.append(data[0]).append(',').append(data[1]).append(',').append(data[2]).append('\n');
