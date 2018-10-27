@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class Generator {
 
@@ -329,8 +330,6 @@ public class Generator {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}	
-				
-			
 	}
 
 }
