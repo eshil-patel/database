@@ -1,6 +1,12 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,9 +15,9 @@ public class Generator {
 	public static final Random RANDOM = new Random();
 	
 	public static final String[] BEERS = {"HAZE","UNRELIABLE NARRATOR","SPOTTED COW","THREE PHILOSOPHERS","PRIMA PILS","TEMPTATION","PSEUDOSUE","SEIZOEN BRETTA",
-			  "SAMUEL ADAMS"," GOSE GONE WILD"," ZOMBIE DUST","NARRAGANSETT LAGER"," OLD CHUB","HEADY TOPPER","MIDAS TOUCH","RUMPKIN","PM DAWN","CORONA","BUDWEISER","COORS","PBR","MILLER","MICHELOB","HEINEKEN","BUSCH"};
+			  "SAMUEL ADAMS","GOSE GONE WILD","ZOMBIE DUST","NARRAGANSETT LAGER","OLD CHUB","HEADY TOPPER","MIDAS TOUCH","RUMPKIN","PM DAWN","CORONA","BUDWEISER","COORS","PBR","MILLER","MICHELOB","HEINEKEN","BUSCH"};
 	
-	public static final String[] food = {"chicken wings","flatbread","steak","chicken burrito","pulled pork","alfredo pasta","fries","spagetti","pizza","garlic bread","noodles","turkey sub","taco","churro","burger","chicken platter"};
+	public static final String[] food = {"Chicken wings","Flatbread","Steak","Chicken burrito","Pulled pork","Alfredo pasta","Fries","Spagetti","Pizza","Garlic bread","Noodles","Turkey sub","Taco","Churro","Burger","Chicken platter"};
 	
 	public static final String[] drinks = {"Coke","Sprite","Seltzer","Orange Juice","Red Bull","Milkshake","Bottled Water","Fanta","Dr.Pepper"};
 	
@@ -34,6 +40,10 @@ public class Generator {
 	public static String[] licenses = new String[100];
 	public static String[][] barAddresses = new String[100][3];
 	public static String[] barPhoneNumbers = new String[100];
+	public static Double[] taxRates = new Double[50];
+	public static String[] state= {"AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME",
+			"MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+			"SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"};
 
 	public static void main(String[] args) {
 		File file = new File("Names.txt");
@@ -106,14 +116,26 @@ public class Generator {
 				licenses[i++] = sc.nextLine();
 			}
 			sc.close();
-			
+			sc = new Scanner(new File("tax_rate.txt"));
+			i = 0;
+			while(sc.hasNextLine()) {
+				String line = sc.nextLine();
+				String[] data = line.split(" ");
+				String taxRate = data[1].substring(0, 4);
+				taxRates[i] = Double.parseDouble(taxRate);
+				i++;
+			}
+			sc.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
 		}
 	
 		//generateDrinkerCSV();
 		//generateBarCSV();
-		generateItemsCSV();
+		//generateItemsCSV();
+		//generateLikes();
+		//generateSells();
+		generateTaxRateCSV();
 //		for (int i = 0; i < 500; i++) {
 //			System.out.println(addresses[i][0] + addresses[i][1] + addresses[i][2]);
 //		}
@@ -160,6 +182,27 @@ public class Generator {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * Generate Bars CSV
+	 */
+	public static void generateTaxRateCSV() {
+		try {
+			PrintWriter writer = new PrintWriter(new File("taxRates.csv"));
+			StringBuilder sb = new StringBuilder();
+			sb.append("state").append(',').append("taxRate").append('\n');
+			
+			
+			for (int i = 0; i < 50; i++) {
+				sb.append(state[i]).append(',').append("" + taxRates[i]).append('\n');
+			}
+			writer.write(sb.toString());
+			writer.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	/**
 	 * Generate Bars CSV
@@ -207,6 +250,87 @@ public class Generator {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Generates the Likes CSV
+	 */
+	public static void generateLikes() {
+		try {
+			PrintWriter writer = new PrintWriter(new File("likes.csv"));
+			StringBuilder sb = new StringBuilder();
+			sb.append("drinkerId").append(',').append("itemId").append('\n');
+			HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
+			for (int i = 0; i < 3000; i++) {
+				int drinkerId = RANDOM.nextInt(1000);
+				int foodId = RANDOM.nextInt(50);
+				boolean cont = false;
+				for (Integer check : map.getOrDefault(drinkerId, new ArrayList<Integer>())) {
+					if (check == foodId) {
+						cont = true;
+						break;
+					}
+				}
+				if (cont) {
+					continue;
+				}
+				sb.append("" + drinkerId).append(',').append("" + foodId).append('\n');
+			}
+			writer.write(sb.toString());
+			writer.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void generateSells() {
+			try{
+				DecimalFormat df = new DecimalFormat("#.00"); 
+				HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
+				BufferedReader reader = new BufferedReader(new FileReader("items.csv"));
+				String line = reader.readLine();
+				while ((line = reader.readLine()) != null) {
+					String[] data = line.split(",");
+					int id = Integer.parseInt(data[0]);
+					int price = Integer.parseInt(data[3]);
+					ArrayList<Integer> list = map.getOrDefault(price, new ArrayList<Integer>());
+					list.add(id);
+					map.put(price, list);
+				}
+				reader.close();
+				PrintWriter writer = new PrintWriter(new File("sells.csv"));
+				StringBuilder sb = new StringBuilder();
+				sb.append("barId").append(',').append("itemId").append(',').append("price").append('\n');
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 100; j++) {
+						int price = RANDOM.nextInt(6) + 5;
+						if (price < 5 || price > 10) {
+							throw new Exception();
+						}
+						ArrayList<Integer> list = map.get(price);
+						int totalSize = list.size();
+						int index = RANDOM.nextInt(totalSize);
+						double interval = (1.0 /totalSize);
+						double lowerBound = interval * index;
+						double actPrice = price + (RANDOM.nextDouble() * interval + lowerBound);
+						String val = df.format(actPrice);
+						int barId = RANDOM.nextInt(100);
+						sb.append("" + barId).append(',').append("" + list.get(index)).append(',').append(val).append('\n');
+					}
+				}
+				writer.write(sb.toString());
+				writer.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+				
+			
 	}
 
 }
