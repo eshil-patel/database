@@ -208,5 +208,13 @@ public class Generator {
 			e.printStackTrace();
 		}
 	}
+	public static void generateSellsCSV()
+	{
+		try{
+			Printwriter writer = new Printwriter(new File("sells.csv"));
+			StringBuilder sb = new StringBuilder();
+			sb.append("Bar_Id").append(',').append("Item_Id").append(',').append("price");
+			
+	}
 
 }
