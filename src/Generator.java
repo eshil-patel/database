@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class Generator {
 
@@ -214,6 +215,9 @@ public class Generator {
 			Printwriter writer = new Printwriter(new File("sells.csv"));
 			StringBuilder sb = new StringBuilder();
 			sb.append("Bar_Id").append(',').append("Item_Id").append(',').append("price");
+			
+			
+			
 			
 	}
 
