@@ -46,6 +46,10 @@ public class Generator {
 			"MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
 			"SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"};
 
+	static int billId = 0;
+	
+	static int transactionId = 0;
+	
 	public static void main(String[] args) {
 		File file = new File("Names.txt");
 		try {
@@ -136,10 +140,106 @@ public class Generator {
 		//generateItemsCSV();
 		//generateLikes();
 		//generateSells();
-		generateTaxRateCSV();
+		//generateTaxRateCSV();
+		generateTransactionsAndBills();
 //		for (int i = 0; i < 500; i++) {
 //			System.out.println(addresses[i][0] + addresses[i][1] + addresses[i][2]);
 //		}
+	}
+	
+	public static void generateTransactionsAndBills() {
+		try { 
+			DecimalFormat df = new DecimalFormat("#.00"); 
+			HashMap<Integer, ArrayList<Integer>> frequents = new HashMap<>();//drinkerId, List<barIds>
+			HashMap<Integer, ArrayList<Double[]>> sells = new HashMap<>();//barId, double[] = { itemId, price }
+			HashMap<Integer, String> bars = new HashMap<>();
+			HashMap<String, Double> tax = new HashMap<>();
+			PrintWriter bills = new PrintWriter(new File("bills.csv"));
+			PrintWriter transactions = new PrintWriter(new File("transactions.csv"));
+			StringBuilder sbBills = new StringBuilder();
+			StringBuilder sbTrans = new StringBuilder();
+			sbBills.append("billId").append(',').append("tax").append(',').append("total").append(',')
+			.append("date").append(',').append("hour").append('\n');
+			sbTrans.append("transactionId").append(',').append("drinkerId").append(',').append("barId").append(',')
+			.append("billId").append(',').append("itemId").append(',').append("price").append('\n');
+			BufferedReader reader = new BufferedReader(new FileReader("frequents.csv"));
+			String line = reader.readLine();
+			while ((line = reader.readLine()) != null) {
+				String data[] = line.split(",");
+				ArrayList<Integer> list = frequents.getOrDefault(Integer.parseInt(data[1]), new ArrayList<Integer>());
+				list.add(Integer.parseInt(data[0]));
+				frequents.put(Integer.parseInt(data[1]), list);
+			}
+			reader = new BufferedReader(new FileReader("sells.csv"));
+			line = reader.readLine();
+			while ((line = reader.readLine()) != null) {
+				String data[] = line.split(",");
+				Double[] vals = { (double) Integer.parseInt(data[1]), Double.parseDouble(data[2]) };
+				ArrayList<Double[]> list = sells.getOrDefault(Integer.parseInt(data[0]), new ArrayList<Double[]>());
+				list.add(vals);
+				sells.put(Integer.parseInt(data[0]), list);
+			}
+			reader = new BufferedReader(new FileReader("bars.csv"));
+			line = reader.readLine();
+			while ((line = reader.readLine()) != null) {
+				String data[] = line.split(",");
+				bars.put(Integer.parseInt(data[0]), data[8]);
+			}
+			reader = new BufferedReader(new FileReader("taxRates.csv"));
+			line = reader.readLine();
+			while ((line = reader.readLine()) != null) {
+				String data[] = line.split(",");
+				tax.put(data[0], Double.parseDouble(data[1]));
+			}
+			reader.close();
+			int transactionCount = 20000;
+			while(transactionCount > 0) {
+				int year = 2018;
+				int month = RANDOM.nextInt(12) + 1;
+				int day = RANDOM.nextInt(28) +  1;
+				String date = "" + (month < 10 ? "0" + month : month) + "/" + (day < 10  ? "0" + day : day) + "/" + year;
+				int hour = (RANDOM.nextInt(11) + 15) % 24;
+				int minutes = RANDOM.nextInt(59) + 1;
+				String time = "" + hour + ":" + minutes;
+				int transAmount = RANDOM.nextInt(4) + 1;
+				double total = 0;
+				int drinkerId = RANDOM.nextInt(1000);
+				ArrayList<Integer> barIds = frequents.get(drinkerId);
+				if (barIds == null) {
+					continue;
+				}
+				int barId = barIds.get(RANDOM.nextInt(barIds.size()));
+				String state = bars.get(barId);
+				Double taxRate = tax.get(state);
+				int id = billId++;
+				for (int i = 0; i < transAmount; i++) {
+					int transId = transactionId++;
+					ArrayList<Double[]> items = sells.get(barId);
+					int index = RANDOM.nextInt(items.size());
+					Double[] data = items.get(index);
+					int itemId = (int) (data[0] / 1);
+					Double price = data[1];
+					total += price;
+					sbTrans.append(""+transId).append(',').append(""+ drinkerId).append(',').append("" + barId).append(',')
+					.append("" + id).append(',').append("" + itemId).append(',').append("" + price).append('\n');
+					transactionCount--;
+				}
+				double copyTax = taxRate / 100.0;
+				total *= 1 + copyTax;
+				String tot = df.format(total);
+				sbBills.append("" + id).append(',').append("" + taxRate).append(',').append(tot).append(',')
+				.append(date).append(',').append(time).append('\n');
+			}
+			bills.write(sbBills.toString());
+			bills.close();
+			transactions.write(sbTrans.toString());
+			transactions.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static void generateItemsCSV() {
