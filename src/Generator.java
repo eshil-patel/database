@@ -198,15 +198,16 @@ public class Generator {
 				int month = RANDOM.nextInt(12) + 1;
 				int day = RANDOM.nextInt(28) +  1;
 				String date = "" + (month < 10 ? "0" + month : month) + "/" + (day < 10  ? "0" + day : day) + "/" + year;
-				int hour = (RANDOM.nextInt(10) + 15) % 24;
+				int hour = RANDOM.nextInt(9) + 15;
 				int minutes = RANDOM.nextInt(59) + 1;
+				String time = "";
 				if (minutes>=10)
 				{
-					String time = "" + hour + ":" + minutes;
+					time = "" + hour + ":" + minutes;
 				}
 				else
 				{
-					String time = ""+ hour + ":0" + minutes;
+					time = ""+ hour + ":0" + minutes;
 				}
 				int transAmount = RANDOM.nextInt(4) + 1;
 				double total = 0;
